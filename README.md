@@ -1,6 +1,6 @@
 # amplify-auth
 
-Bearer token authentication client and server for AMPLIfy services.
+Bearer token authentication client and server for FastAPI applications.
 
 ## Install
 
