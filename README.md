@@ -36,6 +36,27 @@ docker compose up
 
 Requires `ADMIN_TOKEN` in the environment (or a `.env` file). See `docker-compose.yml` for all options.
 
+## Managing tokens (CLI)
+
+Set `ADMIN_TOKEN` and point at a running auth server:
+
+```bash
+export ADMIN_TOKEN=your-admin-token
+export AUTH_URL=http://localhost:8000  # optional, this is the default
+
+# Create a token
+amplify-auth-cli create my-service --scopes read write --ttl 365
+
+# List tokens
+amplify-auth-cli list
+
+# Get details for a specific token
+amplify-auth-cli info <token-id>
+
+# Revoke a token
+amplify-auth-cli revoke <token-id>
+```
+
 ## Development
 
 ```bash
